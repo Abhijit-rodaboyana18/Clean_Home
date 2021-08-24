@@ -1,0 +1,32 @@
+{% extends "userapp/base1.html" %}
+
+{% block title %}
+    <title> Homepage</title>
+{% endblock %}
+
+{% block content %}
+
+<h1> Available Services </h1>
+<!--<div class=""><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/banners/1629708604.jpg" alt="" class="responsive-img"></div>-->
+<span>
+    <div >
+    <div class="row">
+        <div class="col">    <div style="float:left" class="swiper-slide swiper-slide-active"><a href="{% url 'login_page' %}"><div class="img-category valign-wrapper"><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/service/Virus_Fumigation_Service2020031323.svg" alt="" class="" width="50" height="50"></div><div class="valign-wrapper"><span class="line-clamp line-clamp-2 ">Virus Fumigation</span></div></a></div>
+</div>
+        <div class="col"><div style="float:left"  class="swiper-slide swiper-slide-next"><a href="{% url 'login_page' %}"><div class="img-category valign-wrapper"><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/service/plumbling_20201027.svg" alt="" class="" width="50" height="50"></div><div class="valign-wrapper"><span class="line-clamp line-clamp-2 ">Plumbing</span></div></a></div>
+</div>
+        <div class="col"><div style="float:left" class="swiper-slide"><a href="{% url 'login_page' %}"><div class="img-category valign-wrapper"><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/service/electrical_20201027.svg" alt="" class="" width="50" height="50"></div><div class="valign-wrapper"><span class="line-clamp line-clamp-2 ">Electrical</span></div></a></div>
+</div>
+
+        <div class="row">
+            <div class="col"><div style="float:left" class="swiper-slide"><a href="{% url 'login_page' %}"><div class="img-category valign-wrapper"><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/service/e2e_appliances.svg" alt="" class="" width="50" height="50"></div><div class="valign-wrapper"><span class="line-clamp line-clamp-2 ">Appliances</span></div></a></div>
+</div>
+            <div class="col"><div style="float:left" class="swiper-slide"><a href="{% url 'login_page' %}"><div class="img-category valign-wrapper"><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/service/pest_control_20201027.svg" alt="" class="" width="50" height="50"></div><div class="valign-wrapper"><span class="line-clamp line-clamp-2 ">Pest Control</span></div></a></div>
+</div>
+            <div class="col"><div style="float:left" class="relative"><a href="{% url 'login_page' %}"><div class="img-category valign-wrapper"><img src="https://d2vj71og9gdu4k.cloudfront.net/WEB/service/Packers_Movers__2020102411.svg" alt="" class="" width="50" height="50"></div><div class="valign-wrapper"><span class="line-clamp line-clamp-2 ">Packers &amp; Movers</span></div></a></div>
+</div>
+    </div>
+
+</div>
+</span>
+{% endblock %}

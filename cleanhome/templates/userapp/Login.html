@@ -1,0 +1,27 @@
+{% extends "userapp/base1.html" %}
+
+{% block title %}
+    <title> Homepage</title>
+{% endblock %}
+
+{% block content %}
+<body id="bg" style="background-image: '')";>
+<h1 style="text-align:center;">Welcome to KLEAN Home - Cleaning Solutions </h1>
+<div class="container">
+<form action="" method="POST">
+    {% csrf_token %}
+
+
+<div style="text-align:center;">
+    {{form.as_p}}
+
+     <input type="submit" value="Login">
+        </div>
+
+</form>
+<br>
+<h6 style="color:red;">{{msg}}</h6>
+
+</div>
+</body>
+{% endblock %}

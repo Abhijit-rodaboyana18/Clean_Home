@@ -1,0 +1,66 @@
+{% extends "userapp/base2.html" %}
+
+{% block title %}
+    <title> Homepage</title>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<body id="bg" style="background-image: '')";>
+<h1 style="text-align:center;">Welcome to KLEAN Home - Cleaning Solutions </h1>
+<br><br>
+<form>
+
+
+<div style="text-align:center;">
+<h3> Your Booking is Confirmed </h3>
+<table class ="table table-striped">
+        <tr>
+             <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Type of House</th>
+            <th>persons</th>
+            <th>address</th>
+            <th>zip_code</th>
+        </tr>
+
+        <tr>
+            <td>{{fm.user.name}}</td>
+            <td>{{fm.user.mobile}}</td>
+            <td>{{fm.user.email}}</td>
+            <td>{{fm.type_of_home}}</td>
+            <td>{{fm.persons}}</td>
+            <td>{{fm.address}}</td>
+            <td>{{fm.zip_code}}</td>
+
+            <td><a href="{% url 'delete_booking' fm.id %}"><button type="button" class="btn btn-danger"> Delete Booking </button></a></td>
+<!--            <td><a href="{% url 'delete_booking' fm.id %}">Delete Booking</a></td>-->
+        </tr>
+    </table>
+
+<div class="col-25">
+    <div class="container">
+      <h4>Payment Reciept
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i>
+        </span>
+      </h4>
+      <p><a href="#">Type of House</a>      :  <span class="price">{{fm.type_of_home}}</span></p>
+      <p><a href="#">Price</a>    :  <span class="price">₹ {{price}}</span></p>
+      <p><a href="#">CGST 9%</a>    : <span class="price">{{CGST}}</span></p>
+      <p><a href="#">SGST 9%</a>    : <span class="price">{{SGST}}</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>₹ {{Total}}</b></span></p>
+    </div>
+  </div>
+
+        </div>
+
+</form>
+<br>
+<h6 style="color:red;">{{msg}}</h6>
+
+</body>
+{% endblock %}

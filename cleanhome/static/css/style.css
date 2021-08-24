@@ -1,0 +1,73 @@
+header h1 {
+    background-color: grey;
+    text-align : center;
+
+}
+.my_navbar
+{
+    background-color: lightblue;
+    list-style-type: none;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+li
+{
+float:left;
+}
+
+li a {
+    text-decoration:none;
+    color:black;
+    display:block;
+    padding : 15px 15px 15px 15px
+    }
+
+ li a:hover
+ {
+ background-color: orange
+ }
+
+
+footer h3
+{
+    background-color: grey;
+    text-align : center;
+}
+
+body {
+  background-color: lightgrey;
+
+}
+.nav-item dropdown {
+  position: fixed;
+  z-index: 9999;
+}
+.container {
+  width: 30%;
+  border-radius: 85px;
+  background-color: #f2f2f2;
+  padding: 55px;
+}
+
+.container2 {
+  width: 70%;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 55px;
+}
+
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+div.c {
+  text-align: left;
+}
+
+header h5 {
+    text-align : right;
+
+}

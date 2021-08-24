@@ -1,0 +1,45 @@
+{% extends "userapp/base2.html" %}
+
+{% block title %}
+    <title> Homepage</title>
+{% endblock %}
+
+{% block content %}
+<body id="bg" style="background-image: '')";>
+<h1 style="text-align:center;">Welcome to KLEAN Home - Cleaning Solutions </h1>
+<br>
+
+<table class ="table table-striped">
+        <tr>
+             <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Type of House</th>
+            <th>persons</th>
+            <th>address</th>
+            <th>zip_code</th>
+        </tr>
+        <tr>
+            <td>{{ord.user.name}}</td>
+            <td>{{ord.user.mobile}}</td>
+            <td>{{ord.user.email}}</td>
+            <td>{{ord.type_of_home}}</td>
+            <td>{{ord.persons}}</td>
+            <td>{{ord.address}}</td>
+            <td>{{ord.zip_code}}</td>
+        </tr>
+</table>
+<header><h4>Do you want to delete this Booking</h4></header>
+    <a href ="{% url 'confirm_bookings_page' %}">
+        <button class="btn btn-success">Cancel</button>
+    </a>
+<form method="POST">
+    {% csrf_token %}
+    <a href ="{% url 'delete_booking' ord.id %}">
+        <input type="submit" value="Delete" class="btn btn-danger"></a>
+</form>
+<br>
+<h6 style="color:red;">{{msg}}</h6>
+
+</body>
+{% endblock %}
